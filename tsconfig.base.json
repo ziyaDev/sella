@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@sella-store/api": ["libs/api/src/index.ts"]
+      "@sella-store/apis": ["libs/apis/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
