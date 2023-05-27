@@ -1,11 +1,7 @@
+import { NextPage } from 'next'
 
-export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.css file.
-   */
-  return <div className=" text-xl text-primary "> hello</div>;
+const Index: NextPage = () => {
+  return <div>hello</div>
 }
 
-export default Index;
+export default Index
