@@ -1,0 +1,6 @@
+type Query {
+  test: String
+  isAdmin(id: String!): Boolean
+  testBoolean: Boolean
+  testNumber: Number
+}

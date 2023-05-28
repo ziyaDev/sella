@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { TestController } from './test.controller';
+import { TestService } from './test.service';
 import { GraphQLModule } from '@nestjs/graphql';
-import { HelloModule } from '../graphql/hello/hello.module';
+
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
-import { TestModule } from '../graphql/test/test.module';
+import { TestResolver } from './test.resolver';
 
 @Module({
   imports: [
@@ -13,14 +13,11 @@ import { TestModule } from '../graphql/test/test.module';
       sortSchema: true,
       driver: ApolloDriver,
       autoSchemaFile: true,
-     
       
        
     }),
-    HelloModule,
-    TestModule
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [TestController],
+  providers: [TestService,TestResolver],
 })
-export class AppModule {}
+export class TestModule {}
