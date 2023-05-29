@@ -72,7 +72,6 @@ To get started with the project, follow these steps:
     Start the backend server:
     ```
     nx serve backend
-
     ```
     The backend server will start running on `http://localhost:3000`.
 
@@ -93,7 +92,7 @@ The backend API is accessible from the frontend to fetch data. You can make HTTP
 
 Example code for fetching data from the backend API:
 
-```
+```typescript
 import { AppProps } from 'next/app';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
@@ -109,7 +108,6 @@ const client = new ApolloClient({
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
-
       <main>
         <ApolloProvider client={client}>
           <Component {...pageProps} />
