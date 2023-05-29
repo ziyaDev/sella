@@ -1,7 +1,7 @@
 # Sella
 
 
-Sella is an example project showcasing a monorepo architecture with a separate Next.js frontend and NestJS backend. It provides a simple e-commerce store setup to help you understand the integration between Next.js and NestJS.
+Sella is an example project showcasing a monorepo architecture with a separate Next.js frontend and NestJS backend. It provides simple setup to help you understand the integration between Next.js and NestJS.
 
 ## Project Structure
 
