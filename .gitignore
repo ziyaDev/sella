@@ -40,3 +40,5 @@ Thumbs.db
 
 # Next.js
 .next
+# pnmp packages cache file (https://pnpm.js.org) 
+.pnpm-lock.yaml
