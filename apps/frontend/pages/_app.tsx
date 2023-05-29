@@ -1,18 +1,23 @@
 import { AppProps } from 'next/app';
-import { ThemeProvider } from 'next-themes';
-import Head from 'next/head';
-import "./globals.css"
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+
+const client = new ApolloClient({
+  uri: 'http://localhost:3000/graphql',
+
+  cache: new InMemoryCache(),
+});
+
+
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <title>Welcome to frontend!</title>
-      </Head>
+
       <main>
-        <ThemeProvider defaultTheme={'system'} attribute="class" enableSystem>
+        <ApolloProvider client={client}>
           <Component {...pageProps} />
-        </ThemeProvider>
+        </ApolloProvider>
       </main>
     </>
   );

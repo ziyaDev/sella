@@ -4,16 +4,15 @@ import { Resolver, Query, Args } from '@nestjs/graphql';
 export class HelloResolver {
   @Query(() => String)
   hello(): string {
-    return 'Hello from hello';
+    return 'Hello from HelloResolver';
   }
 
   @Query(() => String)
   helloInput(@Args('name') name: string): string {
     return `Hello, ${name}!`;
   }
-  
-    
-@Query(() => Boolean)
+
+  @Query(() => Boolean)
   test(): boolean {
     return false;
   }
