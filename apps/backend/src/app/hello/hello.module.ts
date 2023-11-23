@@ -8,15 +8,6 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { HelloResolver } from './hello.resolver';
 
 @Module({
-  imports: [
-    GraphQLModule.forRoot<ApolloDriverConfig>({
-      sortSchema: true,
-      driver: ApolloDriver,
-      autoSchemaFile: true,
-      
-       
-    }),
-  ],
   controllers: [HelloController],
   providers: [HelloService,HelloResolver],
 })
